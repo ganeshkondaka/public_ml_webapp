@@ -14,8 +14,6 @@ loaded_model=pickle.load(open('trained_model.sav','rb'))
 
 def diabetes_prediction(input_data):
     
-    input_data=(5,166,72,19,175,25.8,0.587,51)
-    
     input_data_as_numpy_array=np.asarray(input_data)
 
     input_data_reshaped=input_data_as_numpy_array.reshape(1,-1) # here we are reshaping the data to one row because if we dont reshape thn the system will wait for the total data to accept.
@@ -28,9 +26,9 @@ def diabetes_prediction(input_data):
     print(prediction)
 
     if prediction==0:
-      print('the person is non diabetic')
+      return 'the person is not diabetic'
     else:
-      print('the person is diabetic')
+      return 'the person is diabetic'
 
 
 
