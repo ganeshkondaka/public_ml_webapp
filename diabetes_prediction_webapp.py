@@ -1,16 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jul 29 17:58:11 2023
-
-@author: GANESH
-"""
 
 import numpy as np
 import pickle
 import streamlit as st
 
 # loading the saved model
-loaded_model=pickle.load(open('new_trained_model.sav','rb'))
+loaded_model=pickle.load(open('D:/mine_/code files @@/python/python_ml_webapp/new_trained_model.sav','rb'))
 
 def diabetes_prediction(input_data):
     
